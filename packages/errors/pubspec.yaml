@@ -1,0 +1,11 @@
+name: errors
+description: Dart package which manages app common errors.
+version: 1.0.0
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  equatable: ^1.2.5
+  meta: ^1.2.4
+  very_good_analysis: ^1.0.4

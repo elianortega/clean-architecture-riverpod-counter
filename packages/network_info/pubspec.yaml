@@ -1,0 +1,12 @@
+name: network_info
+description: Dart package that checks network connection.
+version: 1.0.0
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  data_connection_checker: ^0.3.4
+  equatable: ^1.2.5
+  meta: ^1.1.8
+  very_good_analysis: ^1.0.3
