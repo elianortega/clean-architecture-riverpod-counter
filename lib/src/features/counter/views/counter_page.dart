@@ -4,6 +4,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../logic/counter_state_notifier.dart';
 part 'widgets/counter_widget.dart';
 
+///Keys for testing
+final increaseCounterFabKey = UniqueKey();
+// ignore: public_member_api_docs
+final loadingIndicatorKey = UniqueKey();
+
 /// Counter Page
 class CounterPage extends StatelessWidget {
   ///Counter constructor
@@ -37,7 +42,7 @@ class CounterPage extends StatelessWidget {
           final state = watch(counterNotifierProvider.state);
           if (state is CounterLoaded) number = state.number.value;
           return FloatingActionButton(
-            key: const Key('fab-increase-counter'),
+            key: increaseCounterFabKey,
             onPressed: state.isLoading
                 ? null
                 : () {

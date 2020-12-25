@@ -5,8 +5,8 @@ class _CounterWidget extends ConsumerWidget {
   Widget build(BuildContext context, ScopedReader watch) {
     final state = watch(counterNotifierProvider.state);
     if (state is CounterLoading) {
-      return const CircularProgressIndicator(
-        key: Key('loading-indicator'),
+      return CircularProgressIndicator(
+        key: loadingIndicatorKey,
       );
     } else if (state is CounterLoaded) {
       return Text(
